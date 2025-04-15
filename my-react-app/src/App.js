@@ -1,16 +1,26 @@
 export default function App() {
   function handleClick() {
-    let bodyStyle = document.body.style;
-    
-    if (bodyStyle.backgroundColor === 'black') {
-      bodyStyle.backgroundColor = 'white';
+    const button = document.querySelector('#toggleButton');
+    if (button.style.backgroundColor === 'black') {
+      button.style.backgroundColor = 'white';
+      button.style.color = 'black';
     } else {
-      bodyStyle.backgroundColor = 'black';
+      button.style.backgroundColor = 'black';
+      button.style.color = 'white';
     }
   }
 
   return (
-    <button onClick={handleClick} style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius: '5px' }}>
+    <button
+      id="toggleButton"
+      onClick={handleClick}
+      style={{
+        backgroundColor: 'blue',
+        color: 'white',
+        padding: '10px',
+        borderRadius: '5px'
+      }}
+    >
       Toggle the lights
     </button>
   );
