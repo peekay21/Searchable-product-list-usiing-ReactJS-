@@ -64,6 +64,6 @@ function submitForm(answer) {
       } else {
         resolve();
       }
-    }, 1500);
+    }, 1000);
   });
 }
