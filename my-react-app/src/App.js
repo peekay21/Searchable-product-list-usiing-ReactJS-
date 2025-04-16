@@ -1,20 +1,12 @@
-const myPromise = new Promise((resolve, reject) => {
-  // Do something async, like setTimeout
-  setTimeout(() => {
-    const success = true;
-
-    if (success) {
-      resolve("✅ It worked!");
-    } else {
-      reject("❌ Something went wrong.");
-    }
-  }, 1000);
-});
-
-myPromise
-  .then(result => {
-    console.log(result); // If resolved
-  })
-  .catch(error => {
-    console.error(error); // If rejected
-  });
+import React from 'react';
+import ProductList from './components/ProductList'; // adjust path if needed
+import Posts from './components/Posts';
+export default function App() {
+  return (
+    <div>
+      <h1>My Shop</h1>
+      <Posts/>
+      <ProductList />
+    </div>
+  );
+}
